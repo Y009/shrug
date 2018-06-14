@@ -5,6 +5,9 @@
   <string name="language_selection_title">Input languages</string>
   <string name="select_language">Select input languages</string>
   <string name="shrug">¯\\_(ツ)_/¯</string>
+  <string name="flip">(╯°□°）╯︵ ┻━┻</string>
+  <string name="unflip">┬──┬ ノ( ゜-゜ノ)</string>
+  <string name="donger">༼ つ ◕_◕ ༽つ¯</string>
   <string name="switch_keyboard">Switch keyboard</string>
   <string name="content_description_return">Return</string>
   <string name="content_description_send">Send</string>
