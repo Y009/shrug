@@ -77,9 +77,25 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
             case Keyboard.KEYCODE_DELETE:
                 InputConnection inputConnection = getCurrentInputConnection();
                 String shrug = getString(R.string.shrug);
+                String flip = getString(R.string.flip);
+                String unflip = getString(R.string.unflip);
+                String donger = getString(R.string.donger);
+                String navyseals = getString(R.string.navyseals);
+                // Should redo this if i add too many custom texts so it's modular.
+
                 if (inputConnection.getTextBeforeCursor(shrug.length(), 0).equals(shrug)) {
                     inputConnection.deleteSurroundingText(shrug.length(), 0);
-                } else {
+                } else if (inputConnection.getTextBeforeCursor(flip.length(), 0).equals(flip)) {
+                    inputConnection.deleteSurroundingText(flip.length(), 0);
+
+                } else if (inputConnection.getTextBeforeCursor(unflip.length(), 0).equals(unflip)) {
+                    inputConnection.deleteSurroundingText(unflip.length(), 0);
+
+                } else if (inputConnection.getTextBeforeCursor(donger.length(), 0).equals(donger)) {
+                    inputConnection.deleteSurroundingText(donger.length(), 0);
+                } else if (inputConnection.getTextBeforeCursor(navyseals.length(), 0).equals(navyseals)) {
+                    inputConnection.deleteSurroundingText(navyseals.length(), 0);
+                }else {
                     keyDownUp(KeyEvent.KEYCODE_DEL);
                 }
                 break;

@@ -38,6 +38,10 @@ public class ShrugKeyboardView extends LinearLayout implements View.OnClickListe
 
         RepeatListener listener = new RepeatListener(400, 100, this);
         findViewById(R.id.button_key_shrug).setOnTouchListener(listener);
+        findViewById(R.id.button_key_flip).setOnTouchListener(listener);
+        findViewById(R.id.button_key_unflip).setOnTouchListener(listener);
+        findViewById(R.id.button_key_donger).setOnTouchListener(listener);
+        findViewById(R.id.button_key_navyseals).setOnTouchListener(listener);
         findViewById(R.id.button_key_space).setOnTouchListener(listener);
         findViewById(R.id.button_key_delete).setOnTouchListener(listener);
 
@@ -53,6 +57,26 @@ public class ShrugKeyboardView extends LinearLayout implements View.OnClickListe
             case R.id.button_key_shrug:
                 if (mListener != null) {
                     mListener.onText(getResources().getString(R.string.shrug));
+                }
+                break;
+            case R.id.button_key_flip:
+                if (mListener != null) {
+                    mListener.onText(getResources().getString(R.string.flip));
+                }
+                break;
+            case R.id.button_key_unflip:
+                if (mListener != null) {
+                    mListener.onText(getResources().getString(R.string.unflip));
+                }
+                break;
+            case R.id.button_key_donger:
+                if (mListener != null) {
+                    mListener.onText(getResources().getString(R.string.donger));
+                }
+                break;
+            case R.id.button_key_navyseals:
+                if (mListener != null) {
+                    mListener.onText(getResources().getString(R.string.navyseals));
                 }
                 break;
             case R.id.button_key_switch:

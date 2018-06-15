@@ -12,11 +12,52 @@
         android:id="@+id/button_key_shrug"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="16dp"
-        android:paddingBottom="16dp"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
         android:text="@string/shrug"
         android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="26sp"/>
+        android:textSize="20dp"/>
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/button_key_flip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="@string/flip"
+        android:background="@drawable/btn_keyboard_key_lxx_light"
+        android:textSize="20dp"/>
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/button_key_unflip"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="@string/unflip"
+        android:background="@drawable/btn_keyboard_key_lxx_light"
+        android:textSize="20dp"/>
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/button_key_donger"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="@string/donger"
+        android:background="@drawable/btn_keyboard_key_lxx_light"
+        android:textSize="20dp"/>
+    <Button
+        style="?android:attr/borderlessButtonStyle"
+        android:id="@+id/button_key_navyseals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="1dp"
+        android:paddingBottom="1dp"
+        android:text="Navy seal"
+        android:background="@drawable/btn_keyboard_key_lxx_light"
+        android:textSize="20dp"/>
+
 
     <LinearLayout
         android:layout_width="match_parent"
