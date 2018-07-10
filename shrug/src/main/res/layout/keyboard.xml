@@ -7,66 +7,112 @@
     android:orientation="vertical"
     android:background="@drawable/keyboard_background_lxx_light">
 
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_shrug"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="@string/shrug"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_flip"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_key_shrug"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="@string/shrug"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="@string/flip"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_unflip"
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_key_flip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="15dp"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="@string/flip"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_key_unflip"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="@string/unflip"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_key_donger"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="15dp"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="@string/donger"
+            android:textSize="12sp" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="@string/unflip"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_donger"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="@string/donger"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_navyseals"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="Navy seal"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
-    <Button
-        style="?android:attr/borderlessButtonStyle"
-        android:id="@+id/button_key_test"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingTop="1dp"
-        android:paddingBottom="1dp"
-        android:text="test"
-        android:background="@drawable/btn_keyboard_key_lxx_light"
-        android:textSize="20dp"/>
+        android:layout_marginBottom="4dp"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/button_key_navyseals"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="navy"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/button_key_test"
+            style="?android:attr/borderlessButtonStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="30dp"
+            android:background="@drawable/btn_keyboard_key_lxx_light"
+            android:paddingBottom="1dp"
+            android:paddingTop="1dp"
+            android:text="test"
+            android:textSize="12sp" />
+    </RelativeLayout>
+
 
     <LinearLayout
         android:layout_width="match_parent"
