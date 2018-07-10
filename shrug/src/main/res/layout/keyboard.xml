@@ -98,19 +98,6 @@
             android:text="navy"
             android:textSize="12sp" />
 
-        <Button
-            android:id="@+id/button_key_test"
-            style="?android:attr/borderlessButtonStyle"
-            android:layout_width="wrap_content"
-            android:layout_height="30dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="30dp"
-            android:background="@drawable/btn_keyboard_key_lxx_light"
-            android:paddingBottom="1dp"
-            android:paddingTop="1dp"
-            android:text="test"
-            android:textSize="12sp" />
     </RelativeLayout>
 
 

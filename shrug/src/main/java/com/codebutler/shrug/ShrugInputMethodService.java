@@ -46,8 +46,7 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
                                         getString(R.string.flip),
                                         getString(R.string.unflip),
                                         getString(R.string.donger),
-                                        getString(R.string.navyseals),
-                                        getString(R.string.test)};
+                                        getString(R.string.navyseals)};
     }
 
     @Override
