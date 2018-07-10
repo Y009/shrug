@@ -33,6 +33,7 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
 
     private InputMethodManager mInputMethodManager;
     private ShrugKeyboardView mKeyboardView;
+    private String stringsArray[];
 
     public static final int IME_ACTION_CUSTOM_LABEL = EditorInfo.IME_MASK_ACTION + 1;
 
@@ -41,6 +42,12 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
         super.onCreate();
 
         mInputMethodManager = (InputMethodManager) getSystemService(INPUT_METHOD_SERVICE);
+        stringsArray = new String[] {   getString(R.string.shrug),
+                                        getString(R.string.flip),
+                                        getString(R.string.unflip),
+                                        getString(R.string.donger),
+                                        getString(R.string.navyseals),
+                                        getString(R.string.test)};
     }
 
     @Override
@@ -76,26 +83,33 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
         switch (primaryCode) {
             case Keyboard.KEYCODE_DELETE:
                 InputConnection inputConnection = getCurrentInputConnection();
-                String shrug = getString(R.string.shrug);
+               /* String shrug = getString(R.string.shrug);
                 String flip = getString(R.string.flip);
                 String unflip = getString(R.string.unflip);
                 String donger = getString(R.string.donger);
-                String navyseals = getString(R.string.navyseals);
+                String navyseals = getString(R.string.navyseals);*/
                 // Should redo this if i add too many custom texts so it's modular.
-
+/*
                 if (inputConnection.getTextBeforeCursor(shrug.length(), 0).equals(shrug)) {
                     inputConnection.deleteSurroundingText(shrug.length(), 0);
-                } else if (inputConnection.getTextBeforeCursor(flip.length(), 0).equals(flip)) {
+                }
+                else if (inputConnection.getTextBeforeCursor(flip.length(), 0).equals(flip)) {
                     inputConnection.deleteSurroundingText(flip.length(), 0);
 
-                } else if (inputConnection.getTextBeforeCursor(unflip.length(), 0).equals(unflip)) {
+                }
+                else if (inputConnection.getTextBeforeCursor(unflip.length(), 0).equals(unflip)) {
                     inputConnection.deleteSurroundingText(unflip.length(), 0);
-
-                } else if (inputConnection.getTextBeforeCursor(donger.length(), 0).equals(donger)) {
+                }
+                else if (inputConnection.getTextBeforeCursor(donger.length(), 0).equals(donger)) {
                     inputConnection.deleteSurroundingText(donger.length(), 0);
-                } else if (inputConnection.getTextBeforeCursor(navyseals.length(), 0).equals(navyseals)) {
+                }
+                else if (inputConnection.getTextBeforeCursor(navyseals.length(), 0).equals(navyseals)) {
                     inputConnection.deleteSurroundingText(navyseals.length(), 0);
-                }else {
+                }*/
+                if(checkArray(inputConnection)) {
+                    ;
+                }
+                 else {
                     keyDownUp(KeyEvent.KEYCODE_DEL);
                 }
                 break;
@@ -110,6 +124,30 @@ public class ShrugInputMethodService extends InputMethodService implements Keybo
                 break;
         }
     }
+
+    private boolean checkArray(InputConnection inputConnection){
+        int i;
+        int len;
+        for(i = 0; i < stringsArray.length; i++)
+        {
+            len = stringsArray[i].length();
+            if (getLastString(inputConnection, len).equals(stringsArray[i]))
+            {
+                deleteLast(inputConnection, stringsArray[i]);
+                return true;
+            }
+        }
+        return false;
+    }
+
+    private CharSequence getLastString(InputConnection inputConnection, int len){
+        return inputConnection.getTextBeforeCursor(len, 0);
+    }
+
+    private void deleteLast(InputConnection inputConnection, String str){
+        inputConnection.deleteSurroundingText(str.length(), 0);
+    }
+
 
     private void handleAction() {
         InputConnection inputConnection = getCurrentInputConnection();
